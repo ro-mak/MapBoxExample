@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="0"
+        mapbox:mapbox_cameraTargetLng="0"
+        mapbox:mapbox_cameraZoom="14"
+        mapbox:mapbox_cameraBearing="0"
+        mapbox:mapbox_cameraTilt="60.25"
+        mapbox:mapbox_cameraZoomMax="20"
+        mapbox:mapbox_cameraZoomMin="6"
+        mapbox:mapbox_uiRotateGestures="false"
+        >
+        <com.leinardi.android.speeddial.SpeedDialView
+            android:id="@+id/speedDial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            mapbox:sdMainFabClosedSrc="@drawable/ic_add"
+            mapbox:sdMainFabClosedBackgroundColor="@color/colorPrimary"
+            mapbox:sdMainFabOpenedBackgroundColor="@color/colorPrimaryDark"
+            />
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
